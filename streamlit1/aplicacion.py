@@ -22,6 +22,10 @@ def main():
     image = Image.open(uploaded_file) # gaurdamos la imagen
 
     st.image(image, caption="imagen subida")
+    
+    preprocessed_image = preprocess_image(image)
+
+    st.image(preprocessed_image[0], caption="imagen preprocesada")
 
 
   
