@@ -7,7 +7,7 @@ def main():
   st.markdown("Sube una imagen para clasificar")
 
   # widget que permite subir archivos
-  upload_file = st.fileuploader("Selecciona una imagen (PNG, JPG, JPEG):", type=["png", "jpg", "jpeg"])
+  upload_file = st.file_uploader("Selecciona una imagen (PNG, JPG, JPEG):", type=["png", "jpg", "jpeg"])
   
 
 if __name__ == "__main__":
