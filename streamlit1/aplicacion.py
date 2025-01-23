@@ -4,7 +4,7 @@ from tensorflow.keras.preprocessing.image import img_to_array
 
 def preprocess_image(image):
   image = image.convert('L') # convertir a escala de grises
-  image = image.resize((28,28))7 255.0
+  image = image.resize((28,28)) / 255.0
   image_array = img_to_array(image) 
   image_array = np.expand_dims(image_array, axis=0)
   return image_array
