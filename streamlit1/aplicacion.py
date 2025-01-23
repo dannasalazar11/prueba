@@ -4,6 +4,7 @@ from tensorflow.keras.preprocessing.image import img_to_array
 import numpy as np
 import gzip
 import pickle
+import sklearn
 
 def load_model():
   filename = "streamlit1/model_trained.pkl.gz"
