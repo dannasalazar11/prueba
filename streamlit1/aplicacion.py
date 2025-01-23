@@ -54,14 +54,14 @@ def main():
 
     if uploaded_file is not None:
         # Mostrar la imagen subida
-        st.image(uploaded_file, caption="Imagen subida", use_column_width=True)
+        st.image(uploaded_file, caption="Imagen subida", use_container_width=True)
 
         # Procesar la imagen
         image = Image.open(uploaded_file)
         preprocessed_image = preprocess_image(image)
 
         # Mostrar la imagen preprocesada
-        st.image(preprocessed_image[0], caption="Imagen preprocesada (28x28 px, escala de grises)", use_column_width=True, clamp=True)
+        st.image(preprocessed_image[0], caption="Imagen preprocesada (28x28 px, escala de grises)", use_container_width=True, clamp=True)
 
         # Botón para clasificar
         if st.button("Clasificar Imagen"):
