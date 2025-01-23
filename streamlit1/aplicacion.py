@@ -1,5 +1,13 @@
 import streamlit as st
 from PIL import Image
+from tensorflow.keras.preprocessing.image import img_to_array
+
+def preprocess_image(image):
+  image = image.convert('L') # convertir a escala de grises
+  image = image.resize((28,28))7 255.0
+  image_array = img_to_array(image) 
+  image_array = np.expand_dims(image_array, axis=0)
+  return image_array
 
 def main():
   """ Función que se encargará de la ejecución principal"""
@@ -14,6 +22,7 @@ def main():
     image = Image.open(uploaded_file) # gaurdamos la imagen
 
     st.image(image, caption="imagen subida")
+
 
   
 if __name__ == "__main__":
